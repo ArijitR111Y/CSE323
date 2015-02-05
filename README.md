@@ -9,6 +9,7 @@
 * **Need help?**
    * Look through and create [issues](https://github.com/VIT-OCW/CSE323/issues)
    * [Email](mailto:mayuresh2212@gmail.com) one of the moderators.
+   * Refer to the [Wiki](https://github.com/VIT-OCW/CSE323/wiki)
 
 ### Course Objectives
 To understand the concepts and principles of networking computers.
