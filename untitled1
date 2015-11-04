@@ -1,4 +1,0 @@
-set ns [new Simulator]
-set nf [opn out.nam w]
-
-$ns namtrace-all $nf
