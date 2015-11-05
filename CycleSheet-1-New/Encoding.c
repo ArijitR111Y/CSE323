@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+int main()
+{
+	char str[100];
+	int i,j,current=0;
+	printf("\nEnter the binary string: \n");
+	gets(str);
+	/*NRZ*/printf("\n\nNRZ");
+	for(i=0;i<strlen(str);i++)
+	{
+		if(str[i]=='0')
+			printf("\n0V");
+		else
+			printf("\n5V");
+	}
+	/*NRZI*/printf("\n\nNRZI");
+	for(i=0;i<strlen(str);i++)
+	{
+		if(i==0)
+		{
+			 if(str[i]=='0')
+			 {
+				printf("\n0V");
+				current=0;
+			 }
+			 else
+			 {
+				printf("\n0V-5V");
+				current=5;
+			 }
+		}
+		else
+		{
+			 if(current==0)
+			 {
+			 	if(str[i]=='0')
+				 {
+				 printf("\n0V");
+				 current=0;
+				 }
+				 else
+				 {
+				 printf("\n0V-5V");
+				 current=5;
+				 }
+				
+			}
+			else
+			{
+				 if(str[i]=='0')
+				 {
+				 printf("\n5V");
+				 current=5;
+				 }
+				 else
+			 	{
+			 	printf("\n5V-0V");
+			 	current=0;
+			 	}
+			}		
+		}
+	}
+	/*Manchester*/printf("\n\nManchester");
+	for(i=0;i<strlen(str);i++)
+	{
+		if(str[i]=='0')
+			printf("\n0V-5V");
+		else
+			printf("\n5V-0V");		
+	}
+	getch();
+	return 0;
